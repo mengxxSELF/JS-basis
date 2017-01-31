@@ -10,3 +10,4 @@ function Person(){
 Person.prototype.age=20;
 console.log(publicWay('age',publicWay))
 console.log(publicWay('name',publicWay))
+console.log(publicWay('sex',publicWay))
