@@ -18,7 +18,7 @@
     }
 
     clearInterval(timer);
-    timer = setInterval(moving,60);
+    timer = setInterval(moving,10);
     oBox.onmouseenter = function () {
         clearInterval(timer);
     };
