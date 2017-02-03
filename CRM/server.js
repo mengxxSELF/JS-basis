@@ -45,7 +45,8 @@ var server1 = http.createServer(function (req, res) {
         return;
     }
 
-    //->2)增加客户信息:在NODE中获取客户端请求主体中的内容,我们使用request.on('data')和request.on('end')两个事件处理
+    //->2)增加客户信息:在NODE中获取客户端请求主体中的内容,
+    // 我们使用request.on('data')和request.on('end')两个事件处理
     if (pathname === '/addInfo') {
         var requestStr = '';
         req.on('data', function (chunk) {
