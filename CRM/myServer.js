@@ -17,13 +17,12 @@ http.createServer(function (req,res) {
     var cont;
     var status; // 记录文档状态
     if(reg.exec(pathname)){
-        cont = '文件内容不存在';
-        status =404;
         try{
             cont  = fs.readFileSync('.'+pathname);
             status =200;
         }catch (e){
-
+            cont = '文件内容不存在';
+            status =404;
         }
         // 根据后缀重写响应头
         var end = RegExp.$1;
@@ -38,7 +37,7 @@ http.createServer(function (req,res) {
                 mime='text/javascript';
                 break;
         }
-        res.writeHead(200,{
+        res.writeHead(status,{
             'content-type':mime+';charset=utf-8;'
         });
         res.end(cont);
