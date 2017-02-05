@@ -117,9 +117,18 @@ http.createServer(function (req,res) {
         }
 
     }
-
-
-
+    // 删除用户信息 get 问号传参
+    if(pathname=='/removeInfo'){
+        var userId = query['id'];
+        userInfo.forEach(function (item,index) {
+            if(item['id']==userId){
+                userInfo.splice(index,1);
+            }
+        });
+        // 重新写入
+        fs.writeFileSync(dataPath,JSON.stringify(userInfo));
+        addEnd();
+    }
 
     // 正确的返回
     function addEnd(data){
@@ -128,8 +137,6 @@ http.createServer(function (req,res) {
         res.writeHead(200,{'content-type':'application/json;charset=utf-8;'})
         res.end(JSON.stringify(result));
     }
-
-
 
 
 }).listen(port, function () {
