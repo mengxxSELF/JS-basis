@@ -6,7 +6,7 @@
 node server.js
 ```
 在浏览器窗口打开地址 [http://localhost:9999/index.html](http://localhost:9999/index.html)
-
+即可进入项目首页
 
 
 ### API接口
