@@ -8,8 +8,11 @@
         div{width:1100px; overflow: hidden; margin:20px auto;}
         ul{float: left; width:200px; margin:0 10px ;}
         li{list-style: none;border: 1px solid skyblue;margin:5px 0;
-          background: url("imgs/default.gif") no-repeat center #f1f1f1;
-        }
+          background: url("imgs/default.gif") no-repeat center #f1f1f1;  }
+        a{display: none; width: 100px;height: 100px; background: skyblue; position: fixed; text-align: center  ;
+            text-decoration: none;
+        line-height:100px;right: 30px; bottom: 30px; border-radius: 50%;opacity: 0.6 }
+        a:hover{opacity: 1;}
         img{width: 200px;border-radius: 6px;}
     </style>
 </head>
@@ -20,7 +23,9 @@
     <ul></ul>
     <ul></ul>
     <ul></ul>
+    <a href="javascript:;">Top</a>
 </div>
+<script src="../utils.js"></script>
 <script src="js/16task-waterfall.js"></script>
 </body>
 </html>
