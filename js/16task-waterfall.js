@@ -53,14 +53,14 @@ oTop.onclick = function () {
     timer = setInterval(top,10);
 };
 function top(){
-    var top = document.documentElement.scrollTop||document.body.scrollTop;
-    top-=10;
-    if(top<=0) {
+    var topN = document.documentElement.scrollTop||document.body.scrollTop;
+    topN-=10;
+    if(topN<=0) {
         clearInterval(timer);
-        top=0;
+        topN=0;
         return;
     }
-    document.documentElement.scrollTop=document.body.scrollTop=top;
+    document.documentElement.scrollTop=document.body.scrollTop=topN;
 }
 
 
